@@ -1,0 +1,25 @@
+seed: 42
+output_dir: results/mmgbsa_framewise_demo30
+
+data:
+  lmdb_path: unibind_dataset_demo30.lmdb
+  k_neighbors: 12
+  prune_c_hydrogens: true
+
+split:
+  train_ratio: 0.6
+  val_ratio: 0.2
+  test_ratio: 0.2
+
+model:
+  hidden_dim: 96
+  num_layers: 4
+  dropout: 0.1
+
+training:
+  device: cuda
+  batch_size: 1
+  eval_batch_size: 1
+  epochs: 2
+  learning_rate: 0.001
+  weight_decay: 0.0001

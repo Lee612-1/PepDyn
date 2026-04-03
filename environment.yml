@@ -1,0 +1,23 @@
+name: pepdyn
+channels:
+  - pytorch
+  - pyg
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - ipykernel
+      - lmdb
+      - matplotlib
+      - numpy
+      - pandas
+      - pyyaml
+      - scikit-learn
+      - scipy
+      - seaborn
+      - tqdm
+      - torch==2.7.1
+      - torchvision==0.22.1
+      - torchaudio==2.7.1
+      - torch-geometric

@@ -1,0 +1,27 @@
+seed: 42
+output_dir: results/mmgbsa_full2
+
+data:
+  lmdb_path: unibind_dataset.lmdb
+  k_neighbors: 12
+  prune_c_hydrogens: true
+
+split:
+  train_keys_path: train_keys.txt
+  test_keys_path: test_keys.txt
+  val_ratio_from_train: 0.1
+
+model:
+  hidden_dim: 256
+  num_layers: 4
+  dropout: 0.1
+
+training:
+  device: cuda
+  batch_size: 32
+  eval_batch_size: 1
+  num_workers: 0
+  epochs: 5
+  normalization_max_graphs: 512
+  learning_rate: 0.001
+  weight_decay: 0.0001
